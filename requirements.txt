@@ -8,3 +8,4 @@ xgboost
 Flask
 dill
 -e .
+gunicorn
