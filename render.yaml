@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: student-performance-predictor
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:application --workers 2 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    autoDeploy: true
+```
+
+### `requirements.txt` — verify these are all present
+Open your existing `requirements.txt` and make sure it includes:
+```
+flask
+gunicorn
+scikit-learn
+catboost
+pandas
+numpy
