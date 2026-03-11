@@ -2,7 +2,7 @@ services:
   - type: web
     name: student-performance-predictor
     runtime: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -e . && pip install -r requirements.txt
     startCommand: gunicorn app:application --workers 2 --timeout 120
     envVars:
       - key: PYTHON_VERSION
