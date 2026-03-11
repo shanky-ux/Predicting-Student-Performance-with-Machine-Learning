@@ -1,100 +1,263 @@
-# Predicting-Student-Performance-Using-Machine-Learning
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3c72,50:2a5298,100:4facfe&height=200&section=header&text=Student%20Performance%20AI&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
+</p>
 
-This project aims to predict student performance based on various factors such as gender, ethnicity, parental level of education, lunch type, test preparation course, and exam scores. The machine learning model trained on a dataset of student information can provide insights into predicting a student's performance in mathematics.
+<p align="center">
+  <b>Machine Learning Web Application for Predicting Student Math Performance</b>
+</p>
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dataset](#dataset)
-- [Model Training](#model-training)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Project Structure](#project-structure)
-- [Author](#author)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Flask-WebApp-black?style=for-the-badge&logo=flask"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-MachineLearning-orange?style=for-the-badge&logo=scikit-learn"/>
+  <img src="https://img.shields.io/badge/Data%20Science-ML%20Pipeline-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Actively%20Maintained-brightgreen?style=for-the-badge"/>
+</p>
 
-## Introduction
+---
 
-In today's educational landscape, understanding the factors that contribute to a student's academic performance is crucial for educators, parents, and policymakers. This project leverages machine learning techniques to predict a student's performance in mathematics based on various factors. By providing accurate predictions, this tool can help identify students who may need additional support and tailor educational strategies accordingly.
+## 📌 Overview
 
-**Note: This Project is for Educational Purposes Only**
+Student Performance AI is a machine learning powered web application that predicts a student's **Mathematics score** based on various demographic and academic attributes.
 
-The Student Exam Performance Predictor project is developed for educational purposes to showcase the application of machine learning techniques in predicting student performance. The results obtained from this project are based on a specific dataset and machine learning model, and should not be considered as definitive or accurate predictions for real-world scenarios. The primary goal of this project is to demonstrate the end-to-end process of developing a machine learning model and provide insights into the factors influencing student performance.
+The system demonstrates how **machine learning models can be integrated into a web application** to generate real-time predictions using structured data.
 
+The project implements an **end-to-end ML pipeline**, covering:
 
-## Features
-- Predicts student performance in mathematics based on multiple factors.
-- Provides insights into the influence of gender, ethnicity, parental level of education, lunch type, and test preparation course on student performance.
-- User-friendly interface for inputting student information and obtaining predictions.
+* Data ingestion
+* Data preprocessing
+* Feature transformation
+* Model training
+* Model evaluation
+* Web deployment with Flask
 
-## Installation
+The goal of this project is to showcase how data science and machine learning techniques can be applied to analyze and predict academic performance.
 
-1. Clone the repository: `git clone https://github.com/skprasad117/Predicting-Student-Performance-Using-Machine-Learning.git`
-2. Navigate to the project directory: `cd Predicting-Student-Performance-Using-Machine-Learning`
-3. Install the required dependencies: `pip install -r requirements.txt`
+---
 
-## Usage
+## 🚀 Development Status
 
-1. Run the application: `python app.py`
-2. Access the web interface in your browser at `http://localhost:5000`
-3. Fill in the student information and submit the form to obtain the predicted math score.
+This project is actively maintained and continuously improved.
 
-## Dataset
+Current improvements include:
 
-The dataset used for training the machine learning model is sourced from [Kaggle - Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977). It contains information about students' demographics, parental education, lunch type, test preparation course, and their corresponding math scores.
+* Machine learning pipeline optimization
+* Data preprocessing enhancements
+* Web interface improvements
+* Code modularization
+* Model retraining compatibility updates
+* Deployment readiness for cloud platforms
 
-## Model Training
+Future updates will further improve scalability and prediction performance.
 
-The machine learning model is trained using a supervised learning algorithm, such as a decision tree or random forest, to predict the math score based on the input features. The dataset is split into training and testing sets to evaluate the model's performance.
+---
 
-## Results
+## 🧠 Problem Statement
 
-The trained model achieved an accuracy of 85% in predicting student performance in mathematics. The results demonstrate the significant impact of factors such as parental education, test preparation course, and lunch type on student scores.
+Academic performance prediction is an important task in educational analytics.
 
-## Contributing
+Student outcomes are influenced by several factors such as:
 
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
+* Family background
+* Education level of parents
+* Access to resources
+* Preparation for exams
 
-## License
+This project uses machine learning techniques to analyze these attributes and **predict student math scores**, enabling insights into academic performance patterns.
 
-This project is licensed under the [MIT License](LICENSE).
+---
 
-## Project Structure
+## 🏗️ System Architecture
 
-The project has the following structure:
-    
-    ├───artifacts
-    ├───catboost_info
-    │ └───learn
-    ├───Notebook
-    │ └───data
-    ├───src
-    │ ├───components
-    │ └───pipeline
-    ├───static
-    │ └───css
-    └───templates
+The application follows a **modular machine learning pipeline architecture**.
 
-- `artifacts`: This directory contains artifacts generated during the model training process.
-- `catboost_info`: This directory stores CatBoost model information.
-- `Notebook`: This directory contains notebooks used for data exploration and analysis.
-- `src`: This directory contains the source code for the project.
-  - `components`: This directory contains components and modules used in the project.
-  - `pipeline`: This directory contains code related to the data processing and model training pipeline.
-- `static`: This directory contains static files used in the web application.
-  - `css`: This directory contains CSS files for styling the web application.
-- `templates`: This directory contains HTML templates used in the web application.
+### 1️⃣ User Interface Layer (Flask Web App)
 
-## Author
-Sanjay Kumar Prasad, You can also visit my GitHub profile: @skprasad117
+Handles user input and displays prediction results.
 
-Feel free to reach out with any questions or feedback regarding the project.
+Responsibilities include:
 
+* Collecting student attributes
+* Sending data to prediction pipeline
+* Displaying predicted math score
 
+---
 
+### 2️⃣ Data Ingestion Layer
 
+Responsible for loading and splitting the dataset.
 
+Tasks include:
 
+* Reading dataset
+* Splitting into training and testing data
+* Storing processed datasets inside artifacts directory
 
+---
+
+### 3️⃣ Data Transformation Layer
+
+Performs preprocessing and feature engineering.
+
+Processes include:
+
+* Handling categorical features
+* Applying encoders and transformers
+* Creating preprocessing pipeline
+
+---
+
+### 4️⃣ Model Training Layer
+
+Responsible for training machine learning models.
+
+Key steps:
+
+* Training regression models
+* Evaluating model performance
+* Saving the best performing model
+
+---
+
+### 5️⃣ Prediction Pipeline
+
+Handles real-time inference.
+
+Process:
+
+* Load trained model
+* Apply preprocessing pipeline
+* Generate prediction
+* Return predicted math score
+
+---
+
+## 🧩 Project Structure
+
+Predicting-Student-Performance-with-Machine-Learning
+
+artifacts/
+Stores trained model, preprocessor, and processed datasets
+
+src/components/
+Contains ML pipeline components
+
+* data_ingestion.py
+* data_transformation.py
+* model_trainer.py
+
+src/pipeline/
+Contains prediction pipeline logic
+
+templates/
+HTML files for frontend UI
+
+static/
+CSS files for styling
+
+app.py
+Flask application entry point
+
+requirements.txt
+Project dependencies
+
+README.md
+Project documentation
+
+---
+
+## 🧠 Model Details
+
+* Model Type: Regression Model
+* Framework: Scikit-Learn
+* Input Features: Student demographic and academic attributes
+* Output: Predicted Mathematics Score
+
+Machine learning models analyze relationships between features such as **reading score, writing score, and demographic data** to predict math performance.
+
+---
+
+## 📊 Input Features Used
+
+The prediction model uses the following attributes:
+
+* Gender
+* Race / Ethnicity
+* Parental Level of Education
+* Lunch Type
+* Test Preparation Course
+* Reading Score
+* Writing Score
+
+These features help the model learn patterns influencing academic performance.
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone repository
+
+```bash
+git clone https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning.git
+cd Predicting-Student-Performance-with-Machine-Learning
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Flask application
+
+```bash
+python app.py
+```
+
+Application runs locally at
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 🌍 Deployment Options
+
+This project can be deployed using:
+
+* Render
+* Railway
+* Docker
+* AWS EC2
+* Azure App Services
+
+Deployment allows the model to be accessed through a live web interface.
+
+---
+
+## 🔐 Limitations
+
+* Model accuracy depends on dataset quality
+* Limited to trained dataset features
+* Predictions are statistical estimates
+* Not intended for official academic evaluation
+
+---
+
+## 📈 Future Enhancements
+
+Planned improvements include:
+
+* Model comparison with multiple regression algorithms
+* Advanced feature engineering
+* Interactive data visualization dashboard
+* REST API integration
+* Cloud deployment pipeline
+* Student performance analytics dashboard
+
+---
+
+## 🎓 Learning Outcomes
+
+This project demonstrates practica
