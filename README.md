@@ -24,7 +24,7 @@ The system demonstrates how **machine learning models can be integrated into a w
 
 The project implements an **end-to-end ML pipeline**, covering:
 
-* Data ingestion
+* Data ingestio
 * Data preprocessing
 * Feature transformation
 * Model training
