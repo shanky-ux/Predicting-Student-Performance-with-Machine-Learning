@@ -54,7 +54,7 @@ Future updates will further improve scalability and prediction performance.
 
 ---
 
-## 🧠 Problem Statement
+## 🧠 Problem Statements
 
 Academic performance prediction is an important task in educational analytics.
 
