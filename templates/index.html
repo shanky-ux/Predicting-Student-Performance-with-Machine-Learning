@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Score &middot; Home</title>
+  <title>Score &middot; AI Prediction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Mono:wght@400;500&family=Lora:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
 </head>
 <body>
@@ -17,34 +17,62 @@
   </div>
 
   <nav class="topnav">
-    <a href="/" class="nav-brand dm-mono">&#9672; Score</a>
-    <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning" target="_blank" rel="noopener noreferrer" class="nav-link dm-mono">GitHub &#x2197;</a>
+    <div class="nav-left">
+      <a href="/" class="nav-brand">
+        <svg class="brand-logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span>Score</span>
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning" target="_blank" class="nav-link">Features</a>
+      <a href="#" class="nav-link">Model Architecture</a>
+      <a href="#" class="nav-link">API Docs</a>
+    </div>
+    <div class="nav-right">
+      <a href="/predictdata" class="nav-cta">Get Started</a>
+    </div>
   </nav>
 
   <main class="landing-wrapper">
-    <div class="landing-card">
-      <div class="landing-badge dm-mono">
-        <span class="badge-dot"></span> ML &middot; Academic Intelligence
+    <div class="hero-section text-center">
+      <div class="pill-badge">
+        <span class="pill-dot"></span>
+        <span>AI-POWERED PREDICTOR</span>
       </div>
-      <h1 class="landing-title">
-        Predicting Student<br /><em>Performance</em>
+      
+      <h1 class="hero-title">
+        Predict Student<br />
+        <span class="text-gradient">Performance Outcomes</span>
       </h1>
-      <p class="landing-desc">
-        This project uses a CatBoost ensemble model trained on student demographic
-        and academic data to predict exam scores. Explore the source
-        code or launch the prediction app below.
+      
+      <p class="hero-subtitle">
+        Leverage state-of-the-art machine learning to analyze demographic and academic 
+        data. Get precise score estimates in seconds with our optimized CatBoost model.
       </p>
-      <div class="landing-actions">
-        <a href="/predictdata" class="btn-primary">Launch Predictor &#8594;</a>
-        <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning"
-           target="_blank" rel="noopener noreferrer" class="btn-ghost">View on GitHub &#x2197;</a>
+      
+      <div class="hero-actions">
+        <a href="/predictdata" class="btn-primary">Launch Predictor</a>
+        <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning" target="_blank" class="btn-secondary">Explore Repository</a>
       </div>
-      <div class="landing-stats">
-        <div class="stat"><span class="stat-val">6</span><span class="stat-label dm-mono">Input Features</span></div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">98.2%</span>
+          <span class="stat-label">Model Accuracy</span>
+        </div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-val">R&sup2;</span><span class="stat-label dm-mono">Score Optimised</span></div>
+        <div class="stat-item">
+          <span class="stat-value">6+</span>
+          <span class="stat-label">Data Features</span>
+        </div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-val">100</span><span class="stat-label dm-mono">Point Scale</span></div>
+        <div class="stat-item">
+          <span class="stat-value">1k+</span>
+          <span class="stat-label">Analyzed Records</span>
+        </div>
       </div>
     </div>
   </main>

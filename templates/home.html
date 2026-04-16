@@ -9,10 +9,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Predict a student's score using demographic and academic features." />
-  <title>Score · Student Performance Intelligence</title>
+  <title>Score &middot; Prediction Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Mono:wght@400;500&family=Lora:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_home.css') }}" />
 </head>
 <body>
@@ -23,9 +23,24 @@
     <span class="orb orb-3"></span>
   </div>
 
-  <nav class="topnav" aria-label="Main navigation">
-    <a href="/" class="nav-brand dm-mono">&#9672; Score</a>
-    <a href="https://github.com/skprasad117/Predicting-Student-Performance-Using-Machine-Learning" target="_blank" rel="noopener noreferrer" class="nav-link dm-mono">GitHub &#x2197;</a>
+  <nav class="topnav">
+    <div class="nav-left">
+      <a href="/" class="nav-brand">
+        <svg class="brand-logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span>Score</span>
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="/" class="nav-link">Overview</a>
+      <a href="/predictdata" class="nav-link">Predictor</a>
+      <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning" target="_blank" class="nav-link">Documentation</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://github.com/shanky-ux/Predicting-Student-Performance-with-Machine-Learning" target="_blank" class="nav-cta">Star on GitHub</a>
+    </div>
   </nav>
 
   <div class="page-wrapper">
