@@ -7,5 +7,4 @@ catboost
 xgboost
 Flask
 dill
--e .
 gunicorn
